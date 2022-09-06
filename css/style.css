@@ -55,7 +55,7 @@ nav{
 .hamburger{
     display:none;
     position: fixed;
-    z-index: 100;
+    z-index: 6000;
     top: 1rem;
     right: 1rem;
     padding: 4px;
@@ -359,18 +359,18 @@ form{
         flex-direction: column;
     }
 
-    .menu > li, a{
+    .menu a{
         color: white;
     }
 
     .showMenu {
         transform: translateY(-5%);
-        z-index: 50;
+        z-index: 5000;
     }
 
     i{
-        color: red;
-        z-index: 99999;
+        position: relative;
+        z-index: inherit;
     }
 
 

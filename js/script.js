@@ -6,18 +6,26 @@ $("form").submit(function(e){
 
 $("#camNegra").on('click', function(event) {
     $(".fotoCami").attr("src","img/Tshirt2.png");
+    $(".camiseta > div > .productoNombre").css('color', '#FB088C');
+    $(".camiseta > div > .descripcion").css('color', '#FB088C');
 });
 
 $("#camRosa").on('click', function(event) {
     $(".fotoCami").attr("src","img/Tshirt1.png");
+    $(".camiseta > div > .productoNombre").css('color', '#212222');
+    $(".camiseta > div > .descripcion").css('color', '#212222');
 });
 
 $("#botRosa").on('click', function(event) {
     $(".fotoBottle").attr("src","img/Bottle1.png");
+    $(".botella > div > .productoNombre").css('color', '#212222');
+    $(".botella > div > .descripcion").css('color', '#212222');
 });
 
 $("#botNegra").on('click', function(event) {
     $(".fotoBottle").attr("src","img/Bottle2.png");
+    $(".botella > div > .productoNombre").css('color', '#FB088C');
+    $(".botella > div > .descripcion").css('color', '#FB088C');
 });
 
 
