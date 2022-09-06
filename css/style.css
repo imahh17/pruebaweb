@@ -1,0 +1,611 @@
+/*COLORES GLOBALES*/
+:root {
+    --clr-texto: #212222;
+    --clr-detalle:  #FB088C;
+    --clr-textoFooter: #fff;
+}
+
+@font-face {
+    font-family: 'DM Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DM Sans Regular'), url('font/DMSans-Regular.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'DM Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DM Sans Bold'), url('font/DMSans-Bold.woff') format('woff');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--clr-texto);
+}
+
+body{
+    width:100%;
+    margin: 0;
+    font-family: "DM Sans Bold", sans-serif;
+    color: var(--clr-texto);
+}
+
+.cabecera{
+    height: 100vh;
+}
+
+.logo{
+    margin: 1.5rem;
+	margin-left: 3rem;
+    width: 150px;
+    height: 25px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger{
+    display:none;
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+}
+
+i.closeIcon{
+    display:none;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    width: 35rem;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.menu > li, a{
+    text-decoration: none;
+    font-family: "DM Sans Regular", sans-serif;
+}
+
+.menu > li> a:hover{
+    color: var(--clr-detalle);
+}
+
+.cabeceraContent{
+    position: relative;
+    height: 100%;
+}
+
+.tit{
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tit h2{
+    font-size: 14rem;
+}
+
+.title1{
+    border-bottom: 1px solid var(--clr-texto);
+    z-index: 0;
+}
+
+.title2{
+    text-align: right;
+    z-index: 1000;
+}
+
+.title3{
+    border-top: 1px solid var(--clr-texto);
+    z-index: 0;
+}
+
+.title1 h2, .title3 h2{
+    margin: 0 0 0 19rem;
+}
+
+.title2 h2{
+    margin: 0 19rem 0 0;
+}
+
+.taza{
+    position: absolute;
+    width: 650px;
+    top: 80px;
+    right: 275px;
+    z-index: 1;
+}
+
+.subtitulo{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5rem 0 5rem 0;
+}
+
+.subtitulo ul li{
+    font-family: "DM Sans Regular", sans-serif;
+    width: 63rem;
+    margin-right: 6.5rem;
+    font-size: 2.5rem;
+}
+
+.subtitulo ul {
+    list-style: none; 
+}
+  
+.subtitulo ul li::before {
+    content: "\2022"; 
+    color: var(--clr-detalle);
+    font-weight: bold; 
+    display: inline-block; 
+    width: 0.5em;
+    font-size: 3rem;
+}
+
+.str_text{
+    font-weight: bold;
+}
+
+.camiseta{
+    position: relative;
+    width: 50%;
+    padding-left: 9rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    z-index: 1000;
+}
+
+.productoNombre{
+    font-size: 6rem;
+    margin:0;
+}
+
+.prodContent{
+    padding-bottom: 2rem;
+    border-bottom: 3px solid rgba(81, 81, 81, 0.303);
+}
+
+.descripcion{
+    font-family: "DM Sans Regular", sans-serif;
+    font-size: 1.05rem;
+    width: 20rem;
+}
+
+.colores{
+    display: flex;
+}
+
+.color1{
+    width: 55px;
+    height: 15px;
+    background-color: var(--clr-texto);
+    margin-right: 1.2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.color2{
+    width: 55px;
+    height: 15px;
+    background-color: var(--clr-detalle);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.color1:hover{
+    transform: scale(1.1);
+}
+
+.color2:hover{
+    transform: scale(1.1);
+}
+
+.botonCompra a{
+    font-size: 1.15rem;
+}
+
+.botonCompra a:hover{
+    color: var(--clr-detalle);
+}
+
+.fotoCami{
+    position: absolute;
+    top: 100px;
+    left: 290px;
+    z-index: -50;
+    width: 30rem;
+    transform: rotate(10deg) scaleX(-1);
+}
+
+.botella{
+    position: relative;
+    width: 50%;
+    padding-right: 9rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    z-index: 1000;
+    margin-left: auto; 
+    margin-right: 0;        
+}
+
+.fotoBottle{
+    position: absolute;
+    top: 100px;
+    left: 210px;
+    z-index: -50;
+    width: 17rem;
+}
+
+footer{
+    background-color: var(--clr-texto);
+}
+
+footer > div{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8rem;
+}
+
+footer section > p, form span, span >a, input{
+    color: white;
+}
+
+.footizq p{
+    font-family: "DM Sans Regular", sans-serif;
+    font-size: 1.8rem;
+    margin:0;
+}
+
+.footdch{
+    width:50%;
+}
+
+.footdch p{
+    font-size: 2.2rem;
+    margin:0;
+}
+
+form{
+    margin: 4rem 0 8rem 0;
+}
+
+.mail{
+    width:100%;
+    background: inherit;
+    border-right: none;
+    padding-bottom: 1rem;
+    outline:none; 
+    font-size: 1.2rem;
+}
+
+.mail::placeholder {
+    font-size: 1.2rem;
+    padding:0;
+    margin:0;
+}
+
+.line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonSub{
+    font-family: "DM Sans Regular", sans-serif;
+    background: inherit;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: var(--clr-texto);
+    color:transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid rgb(97, 97, 97);
+    position: relative;
+    top: 8px;
+}
+
+.checkbox:checked {
+    background: var(--clr-detalle);
+}
+
+.botonSub:hover{
+    color: var(--clr-detalle);
+}
+
+/*VERSION MOVIL*/
+@media screen and (max-width: 812px){
+
+    .hamburger{
+        display: initial;
+        border: none;
+    }
+
+    .menu {
+        position: fixed;
+        transform: translateY(-110%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99999;
+        list-style: none;
+        padding-top: 4rem;
+        background: var(--clr-texto);
+        flex-direction: column;
+    }
+
+    .menu > li, a{
+        color: white;
+    }
+
+    .showMenu {
+        transform: translateY(-5%);
+        z-index: 50;
+    }
+
+    i{
+        color: red;
+        z-index: 99999;
+    }
+
+
+    .cabecera{
+        height: 500px;
+    }
+
+    .cabeceraContent{
+        margin-top: 2rem;
+    }
+    
+    .tit h2{
+        font-size: 4rem;
+    }
+
+    .title1 h2, .title3 h2{
+        margin: 0 0 0 2rem;
+    }
+    
+    .title2 h2{
+        margin: 0 2rem 0 0;
+    }
+    
+    .taza{
+        position: absolute;
+        width: 200px;
+        top: 30px;
+        right: 20px;
+        z-index: 1;
+    }
+
+    .subtitulo{
+        display: initial;
+    }
+    
+    .subtitulo ul li{
+        width: 100%;
+        margin-right: 0;
+        font-size: 1.8rem;
+        margin-bottom: 10rem;
+    }
+
+    .camiseta{
+        position: relative;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .productoNombre{
+        font-size: 3rem;
+    }
+
+    .descripcion{
+        font-size: 1rem;
+        width: 15rem;
+    }
+
+    .prodContent nav{
+        display: initial;
+    }
+
+    .botonCompra{
+        margin-top: 1rem;
+    }
+
+    .fotoCami{
+        top: 20px;
+        left: 115px;
+        width: 20rem;
+    }
+
+    .botella{
+        position: relative;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 5rem;
+        padding-bottom: 15rem;
+    }
+
+    .fotoBottle{
+        top: 50px;
+        left: 200px;
+        width: 10rem;
+    }
+
+    footer > div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .footizq{
+        order: 2;
+    }
+
+    .footizq p{
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footdch{
+        order: 1;
+        width:100%;
+    }
+    
+    .footdch p{
+        font-size: 1.8rem;
+        margin:0;
+    }
+    
+    form{
+        margin: 4rem 0 8rem 0;
+    }
+    
+    .line{
+        flex-direction: column;
+    }
+    
+    .botonSub{
+        width: 50%;
+        padding: 20px 0 0 0;
+        text-align: left;
+    }
+    
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background: var(--clr-texto);
+        color:transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid rgb(97, 97, 97);
+        position: relative;
+        top: 8px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 834px) and (max-width: 1360px){ 
+    .tit h2{
+        font-size: 8rem;
+    }
+
+    .title1 h2, .title3 h2{
+        margin: 0 0 0 16rem;
+    }
+    
+    .title2 h2{
+        margin: 0 16rem 0 0;
+    }
+    
+    .taza{
+        position: absolute;
+        width: 400px;
+        top: 40px;
+        right: 285px;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (min-width: 1360px) and (max-width: 1440px){ 
+    .tit h2{
+        font-size: 8rem;
+    }
+
+    .title1 h2, .title3 h2{
+        margin: 0 0 0 16rem;
+    }
+    
+    .title2 h2{
+        margin: 0 16rem 0 0;
+    }
+    
+    .taza{
+        position: absolute;
+        width: 400px;
+        top: 40px;
+        right: 285px;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1680px){ 
+    .tit h2{
+        font-size: 10rem;
+    }
+
+    .title1 h2, .title3 h2{
+        margin: 0 0 0 16rem;
+    }
+    
+    .title2 h2{
+        margin: 0 16rem 0 0;
+    }
+    
+    .taza{
+        position: absolute;
+        width: 400px;
+        top: 40px;
+        right: 285px;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (min-width: 1680px) and (max-width: 1860px){ 
+    .tit h2{
+        font-size: 12rem;
+    }
+
+    .title1 h2, .title3 h2{
+        margin: 0 0 0 16rem;
+    }
+    
+    .title2 h2{
+        margin: 0 16rem 0 0;
+    }
+    
+    .taza{
+        position: absolute;
+        width: 400px;
+        top: 40px;
+        right: 285px;
+        z-index: 1;
+    }
+    
+}
