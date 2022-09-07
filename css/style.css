@@ -85,6 +85,25 @@ i.closeIcon{
     color: var(--clr-detalle);
 }
 
+.sideBarHelp{
+    display: grid;
+}
+
+.sideBar{
+    position: fixed;
+    transform: rotate(90deg);
+    right: 0;
+    top: 50%;
+}
+
+.sideBar a::before {
+    content: "——"; 
+    color: var(--clr-detalle);
+    font-weight: bold; 
+    display: inline-block; 
+    font-size: 1rem;
+}
+
 .cabeceraContent{
     position: relative;
     height: 100%;
@@ -338,6 +357,10 @@ form{
 
 /*VERSION MOVIL*/
 @media screen and (max-width: 380px){
+    .sideBar{
+        display: none;
+    }
+
     .fotoCami{
         top: 40px;
         left: 115px;
@@ -515,6 +538,9 @@ form{
 }
 
 @media screen and (min-width: 381px) and (max-width: 812px){
+    .sideBar{
+        display: none;
+    }
 
     .hamburger{
         display: initial;
